@@ -189,9 +189,7 @@ var CMS = {
 	},
 
 	renderError: function(msg) {
-		var tpl = CMS.template(document.getElementById('.error_text').innerHTML);
-		var tpl = $('#error-template').html(),
-			$tpl = $(tpl);
+		var tpl = CMS.template(document.getElementById('error-template').innerHTML);
 
 		tpl.childNodes[3].innerHTML = msg;
 
