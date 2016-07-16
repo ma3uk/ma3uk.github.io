@@ -19,7 +19,7 @@ $(function() {
 
     // Navigation items
     siteNavItems: [
-      { name: 'Github', href: 'https://github.com/yourname', newWindow: false},
+      { name: 'Github', href: 'https://github.com/ma3uk', newWindow: false},
       { name: 'About'}
     ],
 
@@ -52,12 +52,12 @@ $(function() {
 
     // Mode 'Github' for Github Pages, 'Server' for Self Hosted. Defaults
     // to Github
-    mode: 'Apache',
+    mode: 'Github',
 
      // If Github mode is set, your Github username and repo name.
     githubUserSettings: {
-      username: 'yourusername',
-      repo: 'yourrepo'
+      username: 'ma3uk',
+      repo: 'ma3uk.github.io'
     },
 
     // If Github mode is set, choose which Github branch to get files from.
