@@ -173,9 +173,6 @@ var CMS = {
 				window.location.hash = '!post/' + post.id;
 			};
 
-			postLink.html(title);
-			postSnippet.html(snippet);
-			postDate.html(date);
 			CMS.settings.mainContainer.append(tpl).hide().fadeIn(CMS.settings.fadeSpeed);
 		});
 		CMS.renderFooter();
