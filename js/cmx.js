@@ -424,7 +424,7 @@ var CMS = {
 			// Set brand
 			if(attribute.attr == '.cms_sitename') {
 				if (attribute.value.match(/\.(jpeg|jpg|gif|png)$/)) {
-		            value = '<img src="' + attribute.valu	e + '" />';
+		            value = '<img src="' + attribute.value + '" />';
 		        } else {
 		            value = attribute.value;
 		        }
