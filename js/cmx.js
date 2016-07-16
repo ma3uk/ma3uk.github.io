@@ -164,9 +164,9 @@ var CMS = {
 				date = (post.date.getMonth() + 1) + '/' + post.date.getDate() + '/' +  post.date.getFullYear(),
 				snippet = post.contentData.split('.')[0] + '.';
 
-			var postLink = $tpl.find('.post-title'),
-				postDate = $tpl.find('.post-date'),
-				postSnippet = $tpl.find('.post-content');
+				tpl.childNodes[1].innerHTML = post.title;
+				tpl.childNodes[3].innerHTML = (post.date.getMonth() + 1) + '/' + post.date.getDate() + '/' +  post.date.getFullYear();
+				tpl.childNodes[5].innerHTML = post.contentData;
 
 			postLink.on('click', function (e) {
 				e.preventDefault();
