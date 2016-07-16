@@ -164,14 +164,14 @@ var CMS = {
 				date = (post.date.getMonth() + 1) + '/' + post.date.getDate() + '/' +  post.date.getFullYear(),
 				snippet = post.contentData.split('.')[0] + '.';
 
-				tpl.childNodes[1].innerHTML = post.title;
-				tpl.childNodes[3].innerHTML = (post.date.getMonth() + 1) + '/' + post.date.getDate() + '/' +  post.date.getFullYear();
-				tpl.childNodes[5].innerHTML = post.contentData;
+				tpl.childNodes[1].innerHTML = title;
+				tpl.childNodes[3].innerHTML = date;
+				tpl.childNodes[5].innerHTML = snippet;
 
-			postLink.on('click', function (e) {
+			tpl.childNodes[1].onclick = function (e) {
 				e.preventDefault();
 				window.location.hash = '!post/' + post.id;
-			});
+			};
 
 			postLink.html(title);
 			postSnippet.html(snippet);
