@@ -9,9 +9,12 @@ __plugin__ = {
         "year":"2016"
     },
 	pages:[
-        {"title":"Sitemapper","contentData":"<button onclick='CMS.plugins.sitemapper.go()'>Sitemap</button><pre class='sitemapper-xml'></pre>"}
+        {"title":"Sitemapper","contentData":"Hello! This is a test!<button onclick='CMS.plugins.sitemapper.btn()'>Go!</button><div><code class='sitemapper-xml'></code></div>"}
     ],	xml:"",
-    go:function() {
+     go:function(freq, priority) {
+		CMS.renderPage("Sitemapper")
+    },
+	btn:function() {
         var pages = []
         // Sitemapper function
 		CMS.pages.forEach(function (post) {
@@ -21,8 +24,8 @@ __plugin__ = {
         pages.forEach(function (page) {
             xmx += "<url><loc>" + page + "</loc><lastmod>" + Date() + "</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>"
         });
-        xmx += "</urlset>";
-		document.getElementById('.sitemapper-xml').innerHTML = xmx;
+       xmx += "</urlset>";
+	$(".sitemapper-xml").text(xmx);
 		
     }
 };
